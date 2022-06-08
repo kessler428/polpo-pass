@@ -1,11 +1,11 @@
-import { Header } from "../../components/Header/Header";
-import { Cards } from "../../components/HomePage/Cards";
-import { Footer } from "../../components/Footer/Footer";
+import HeaderAdmin from "../../../components/Header/HeaderAdmin";
+import { Footer } from "../../../components/Footer/Footer";
+import { Cards } from "../../../components/HomePage/Cards";
 
-function HomePage() {
+const HomeAdmin = () => {
   return (
     <>
-      <Header />
+      <HeaderAdmin />
       <div className="bg-bgPrimary">
         <div className="bg-home-banner min-h-[450px] bg-center bg-cover bg-no-repeat px-8 md:px-8 xl:px-40 py-40 flex flex-wrap items-center bg-bgPrimary">
           <h1 className="w-full text-white text-5xl mb-4">
@@ -28,4 +28,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default HomeAdmin;

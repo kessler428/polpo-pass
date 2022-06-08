@@ -27,8 +27,8 @@ const Login = () => {
   };
 
   return (
-    <div className='flex mx-auto w-full h-full'>
-      <div className='w-1/2 flex-row'>
+    <div className='flex mx-auto w-full '>
+      <div className='w-1/2 flex-row bg-bgPrimary'>
         <div className="w-32 lg:w-60 py-4 ml-36">
           <Link to="/">
             <img src={logo} alt="Logo polpoevents" />
@@ -108,13 +108,13 @@ const Login = () => {
         <hr className='mt-5 w-3/5 mx-auto' />
 
         <div className="justify-center mt-8 flex">
-          <a className='w-3/5 py-4 border text-center rounded-lg text-xl text-blue-700 hover:bg-gray-200' href="/register">
+          <a className='w-3/5 py-4 border text-center rounded-lg text-xl text-bgWhite hover:bg-gray-200 hover:text-bgViolet' href="/register">
             Registrarse
           </a>
         </div>
       </div>
-      <div className='w-1/2 right-0 absolute h-full'> 
-        <img src={lateralImage} alt=""/>
+      <div className='w-1/2'> 
+        <img className="bg-cover bg-no-repeat h-screen w-screen" src={lateralImage} alt=""/>
       </div>
     </div>
   )

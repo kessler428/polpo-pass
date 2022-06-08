@@ -1,4 +1,3 @@
-import { GrFormDown } from "react-icons/gr";
 import { title } from "../../interfaces/HeaderMenu";
  
 function HeaderMenu({
@@ -6,7 +5,7 @@ function HeaderMenu({
 }: title) {
   return (
     <div className="flex cursor-pointer text-white h-full items-center px-8">
-        {title} <GrFormDown className="ml-2 font-bold text-white" />
+        {title}
     </div>
   );
 }

@@ -13,7 +13,7 @@ export const ViewEvent = () => {
     return (
         <>
             <Header />
-            <div className="h-full w-full mb-60">
+            <div className="h-full w-full pb-60 bg-bgPrimary">
                 <div>
                     <img className="bg-cover bg-no-repeat" src={bgBanner} alt="Imagen de fondo" />
                     <div className="ml-40 flex flex-row w-60 h-28 text-white -mt-28 ">

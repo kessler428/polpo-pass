@@ -1,7 +1,12 @@
-import { NavLink } from "react-router-dom";
+// imagenes
 import logo from "../../assets/polpoPass.svg";
-import { BsSearch } from "react-icons/bs";
+
+//Componentes
 import HeaderMenu from "./HeaderMenu";
+
+//Librerias
+import { NavLink } from "react-router-dom";
+import { BsSearch } from "react-icons/bs";
 
 export const Header = () => {
   return (

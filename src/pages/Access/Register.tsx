@@ -1,12 +1,14 @@
-import React from 'react'
+// React Hooks
 import { Link } from 'react-router-dom'
+
+//Imagenes
 import logo from "../../assets/polpoPass.svg";
 import lateralImage from "../../images/lateral-image.jpg"
 
 const Register = () => {
 
   return (
-    <div className='flex w-full h-full'>
+    <div className='flex w-full h-full bg-bgPrimary'>
       <div className='w-1/2'>
         <div className='w-3/5 mx-auto'>
           <div className="py-4">
@@ -56,14 +58,14 @@ const Register = () => {
             </div>
           </form>
           <div className="justify-center mt-8 flex">
-            <a className='w-full py-4 border text-center rounded-lg text-xl text-blue-700 hover:bg-gray-200' href="/login">
+            <a className='w-full py-4 border text-center rounded-lg text-xl text-bgWhite hover:bg-gray-200 hover:text-bgViolet' href="/login">
               Iniciar sesión
             </a>
           </div>
         </div>
       </div>
-      <div className='w-1/2 right-0 absolute h-full'> 
-        <img src={lateralImage} alt=""/>
+      <div className='w-1/2'> 
+        <img className='w-screen' src={lateralImage} alt=""/>
       </div>
     </div>
   )
