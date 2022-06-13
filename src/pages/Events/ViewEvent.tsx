@@ -8,6 +8,7 @@ import bgBanner from '../../images/BG_BANNER_02.png'
 import innovation from '../../images/Innovation.png'
 
 export const ViewEvent = () => {
+    
     const [openModal, setOpenModal] = useState(false)
 
     return (

@@ -41,6 +41,7 @@ export const ModalBill = ({ openModal,setOpenModal }: any) => {
                             <div className='flex flex-col'>
                                 <h5 className='font-bold'>Cantidad</h5>
                                 <select className='border w-16 h-8 mb-4 mt-5'>
+                                    <option value="">0</option>
                                     <option value="">1</option>
                                     <option value="">2</option>
                                     <option value="">3</option>
@@ -48,6 +49,7 @@ export const ModalBill = ({ openModal,setOpenModal }: any) => {
                                     <option value="">5</option>
                                 </select>
                                 <select className='border w-16 h-8 mb-4'>
+                                    <option value="">0</option>
                                     <option value="">1</option>
                                     <option value="">2</option>
                                     <option value="">3</option>
@@ -55,6 +57,7 @@ export const ModalBill = ({ openModal,setOpenModal }: any) => {
                                     <option value="">5</option>
                                 </select>
                                 <select className='border w-16 h-8 mb-4'>
+                                    <option value="">0</option>
                                     <option value="">1</option>
                                     <option value="">2</option>
                                     <option value="">3</option>

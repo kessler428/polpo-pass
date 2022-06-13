@@ -4,10 +4,12 @@ import paypal from '../../assets/paypal.svg'
 import sendMoney from '../../assets/sendMoney.svg'
 import transferencia from '../../assets/transferencia.svg'
 import { ModalDetail } from './ModalDetail'
+import { Paypal } from './Paypal'
 
 export const ModalDataPayment = ({ modal2 ,setModal2 }: any) => {
 
     const [modal3, setModal3] = useState(false)
+    const [payment, setPayment] = useState(0)
 
     return (
         <div className="fixed inset-0 bg-gray-400 bg-opacity-70 overflow-y-auto h-full w-full z-50">
@@ -43,31 +45,80 @@ export const ModalDataPayment = ({ modal2 ,setModal2 }: any) => {
                                 <h2 className="font-bold text-2xl">Escoja el metodo de pago</h2>
                             </div>
                             <div className='w-full flex flex-row gap-2 mt-5'>
-                                <div className='flex w-1/4 justify-center items-center flex-col border-2 border-black rounded-2xl p-2'>
+                                <button 
+                                    onClick={() => setPayment(1)} 
+                                    className={ payment === 1 ? 
+                                        'flex w-1/4 justify-center items-center cursor-pointer flex-col border-2 border-bgViolet rounded-2xl p-2' :
+                                        'flex w-1/4 justify-center items-center cursor-pointer flex-col border-2 border-black rounded-2xl p-2'
+                                    }
+                                >
                                     <img src={creditCard} alt="" />
-                                    <p className='text-xs text-center'>Trajeta de credito</p>
-                                </div>
-                                <div className='flex w-1/4 justify-center items-center flex-col border-2 border-black rounded-2xl p-2'>
+                                    <p className='text-xs text-center'>Tarjeta de credito</p>
+                                </button>
+                                <button 
+                                    onClick={() => setPayment(2)}
+                                    className={ payment === 2 ? 
+                                        'flex w-1/4 justify-center items-center cursor-pointer flex-col border-2 border-bgViolet rounded-2xl p-2' :
+                                        'flex w-1/4 justify-center items-center cursor-pointer flex-col border-2 border-black rounded-2xl p-2'
+                                    }
+                                >
                                     <img src={paypal} alt="" />
-                                </div>
-                                <div className='flex w-1/4 justify-center items-center flex-col border-2 border-black rounded-2xl p-2'>
+                                </button>
+                                <button 
+                                    onClick={() => setPayment(3)}
+                                    className={ payment === 3 ? 
+                                        'flex w-1/4 justify-center items-center cursor-pointer flex-col border-2 border-bgViolet rounded-2xl p-2' :
+                                        'flex w-1/4 justify-center items-center cursor-pointer flex-col border-2 border-black rounded-2xl p-2'
+                                    }
+                                >
                                     <img src={transferencia} alt="transferencia" />
                                     <p className='text-xs text-center'>transferencia</p>
-                                </div>
-                                <div className='flex w-1/4 justify-center items-center flex-col border-2 border-black rounded-2xl p-2'>
+                                </button>
+                                <button 
+                                    onClick={() => setPayment(4)}
+                                    className={ payment === 4 ? 
+                                        'flex w-1/4 justify-center items-center cursor-pointer flex-col border-2 border-bgViolet rounded-2xl p-2' :
+                                        'flex w-1/4 justify-center items-center cursor-pointer flex-col border-2 border-black rounded-2xl p-2'
+                                    }
+                                >
                                     <img src={sendMoney} alt="" />
-                                </div>
+                                </button>
                             </div>
-                            <div className='mt-4'>
-                                <div className="w-full flex flex-row gap-2">
-                                    <input className="bg-gray-200 w-1/2 py-2 px-2 rounded-lg" placeholder="Numero de la tarjeta" type="text" />
-                                    <input className="bg-gray-200 w-1/2 py-2 px-2 rounded-lg" placeholder="Expira" type="text" />
-                                </div>
-                                <div className="w-full flex flex-row gap-2 mt-4">
-                                    <input className="bg-gray-200 w-1/2 py-2 px-2 rounded-lg" placeholder="Nombre de la tatjeta" type="text" />
-                                    <input className="bg-gray-200 w-1/2 py-2 px-2 rounded-lg" placeholder="CVV" type="text" />
-                                </div>
-                            </div>
+                            {
+                                payment === 1 && (
+                                    <div className='mt-4'>
+                                        <div className="w-full flex flex-row gap-2">
+                                            <input className="bg-gray-200 w-1/2 py-2 px-2 rounded-lg" placeholder="Numero de la tarjeta" type="text" />
+                                            <input className="bg-gray-200 w-1/2 py-2 px-2 rounded-lg" placeholder="Expira" type="text" />
+                                        </div>
+                                        <div className="w-full flex flex-row gap-2 mt-4">
+                                            <input className="bg-gray-200 w-1/2 py-2 px-2 rounded-lg" placeholder="Nombre de la tarjeta" type="text" />
+                                            <input className="bg-gray-200 w-1/2 py-2 px-2 rounded-lg" placeholder="CVV" type="text" />
+                                        </div>
+                                    </div>
+                                )
+                            }
+                            {
+                                payment === 2 && (
+                                    <Paypal />
+                                )
+                            }
+                            {
+                                payment === 3 && (
+                                    <div className='mt-5'>
+                                        <label className='text-xl font-bold'>Ingrese su comprobante de pago</label>
+                                        <input className='mt-5' type="file" />
+                                    </div>
+                                )
+                            }
+                            {
+                                payment === 4 && (
+                                    <div className='mt-5'>
+                                        <label className='text-xl font-bold'>Ingrese su comprobante de pago</label>
+                                        <input className='mt-5' type="file" />
+                                    </div>
+                                )
+                            }
                         </div>
                         
                         <div className='mt-8'>
