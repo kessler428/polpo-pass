@@ -18,7 +18,7 @@ function HeaderManager() {
 
   return (
     <div>
-      <div className="w-full flex fixed flex-row justify-between py-3 pl-8 bg-bgPrimary border-b">
+      <div className="w-full flex fixed flex-row justify-between py-2 pl-8 bg-bgPrimary border-b">
         <div className="w-6/12 lg:w-1/12 py-4">
           <Link to="/">
             <img className="w-[110px]" src={logo} alt="Logo polpoevents" />

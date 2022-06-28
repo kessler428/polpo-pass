@@ -9,7 +9,7 @@ import { iconsSideBar } from '../../interfaces/InterfacesSideBar';
 
 const SideBar = () => {
   return (
-    <div className='fixed mt-[76px] top-0 left-0 h-screen w-16 m-0 flex flex-col bg-bgPrimary text-black border-r'>
+    <div className='fixed mt-[68px] top-0 left-0 h-screen w-16 m-0 flex flex-col bg-bgPrimary text-black border-r'>
         <NavLink 
           to="/events"
           className={ ({isActive}) => isActive ? 'bg-bgViolet mt-6 mb-4 p-4 text-white rounded mx-1' : 'mt-4 mb-4 p-4 text-white hover:bg-bgVioletHover'} 

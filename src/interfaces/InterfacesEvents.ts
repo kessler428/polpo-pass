@@ -26,3 +26,10 @@ export interface FormTableData {
     add: boolean;
     Obligatorio: boolean;
 }
+
+export interface EventDataProps {
+    id: string;
+    title: string;
+    img: string;
+    direction: string;
+}
