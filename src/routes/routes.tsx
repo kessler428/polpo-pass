@@ -2,30 +2,32 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { SpinerLoading } from "../components/SpinerLoading";
 
-const HomePage = lazy(() => import('../pages/HomePage'))
-const Login = lazy(() => import('../pages/Access/Login'))
-const Register = lazy(() => import('../pages/Access/Register'))
-const HomeAdmin = lazy(() => import('../pages/Admin/Home/homeAdmin'))
-const Events = lazy(() => import('../pages/Admin/EventsAdmin/Events'))
-const CreateEvent = lazy(() => import('../pages/Admin/EventsAdmin/CreateEvent'))
-const ViewEventAdmin = lazy(() => import('../pages/Admin/EventsAdmin/ViewEventAdmin'))
-const BasicInformation = lazy(() => import('../pages/Admin/EventsAdmin/EditEvents/BasicInformation'))
-const ConfirmationForm = lazy(() => import('../pages/Admin/EventsAdmin/EditEvents/ConfirmationForm'))
-const Dashboard = lazy(() => import('../pages/Admin/EventsAdmin/EditEvents/Dashboard'))
-const Details = lazy(() => import('../pages/Admin/EventsAdmin/EditEvents/Details'))
-const Order = lazy(() => import('../pages/Admin/EventsAdmin/EditEvents/Order'))
-const OrderForm = lazy(() => import('../pages/Admin/EventsAdmin/EditEvents/OrderForm'))
-const Publish = lazy(() => import('../pages/Admin/EventsAdmin/EditEvents/Publish'))
-const WaitList = lazy(() => import('../pages/Admin/EventsAdmin/EditEvents/WaitList'))
-const Pedidos = lazy(() => import('../pages/Admin/Pedidos/Pedidos'))
-const Reportes = lazy(() => import('../pages/Admin/Reportes/Reportes'))
-const VerReporte1 = lazy(() => import('../pages/Admin/Reportes/VerReporte1'))
-const VerReporte2 = lazy(() => import('../pages/Admin/Reportes/VerReporte2'))
-const Finanzas = lazy(() => import('../pages/Admin/Finanzas/Finanzas'))
-const Settings = lazy(() => import('../pages/Admin/Settings/Settings'))
-const PerfilAdd = lazy(() => import('../pages/Admin/Settings/PerfilAdd'))
-const PerfilEdit = lazy(() => import('../pages/Admin/Settings/PerfilEdit'))
-const ViewEvent = lazy(() => import('../pages/Events/ViewEvent'))
+const HomePage          =   lazy(() => import('../pages/HomePage'))
+const Login             =   lazy(() => import('../pages/Access/Login'))
+const Register          =   lazy(() => import('../pages/Access/Register'))
+const HomeAdmin         =   lazy(() => import('../pages/Admin/Home/homeAdmin'))
+const Events            =   lazy(() => import('../pages/Admin/EventsAdmin/Events'))
+const CreateEvent       =   lazy(() => import('../pages/Admin/EventsAdmin/CreateEvent'))
+const ViewEventAdmin    =   lazy(() => import('../pages/Admin/EventsAdmin/ViewEventAdmin'))
+const BasicInformation  =   lazy(() => import('../pages/Admin/EventsAdmin/EditEvents/BasicInformation'))
+const ConfirmationForm  =   lazy(() => import('../pages/Admin/EventsAdmin/EditEvents/ConfirmationForm'))
+const Dashboard         =   lazy(() => import('../pages/Admin/EventsAdmin/EditEvents/Dashboard'))
+const Details           =   lazy(() => import('../pages/Admin/EventsAdmin/EditEvents/Details'))
+const Order             =   lazy(() => import('../pages/Admin/EventsAdmin/EditEvents/Order'))
+const OrderForm         =   lazy(() => import('../pages/Admin/EventsAdmin/EditEvents/OrderForm'))
+const Publish           =   lazy(() => import('../pages/Admin/EventsAdmin/EditEvents/Publish'))
+const WaitList          =   lazy(() => import('../pages/Admin/EventsAdmin/EditEvents/WaitList'))
+const OrderAdmin        =   lazy(() => import('../pages/Admin/Pedidos/OrderAdmin'))
+const Reportes          =   lazy(() => import('../pages/Admin/Reportes/Reportes'))
+const VerReporte1       =   lazy(() => import('../pages/Admin/Reportes/VerReporte1'))
+const VerReporte2       =   lazy(() => import('../pages/Admin/Reportes/VerReporte2'))
+const Finanzas          =   lazy(() => import('../pages/Admin/Finanzas/Finanzas'))
+const Settings          =   lazy(() => import('../pages/Admin/Settings/Settings'))
+const PerfilAdd         =   lazy(() => import('../pages/Admin/Settings/PerfilAdd'))
+const PerfilEdit        =   lazy(() => import('../pages/Admin/Settings/PerfilEdit'))
+const ViewEvent         =   lazy(() => import('../pages/Events/ViewEvent'))
+const OrderView         =   lazy(() => import('../pages/Admin/Pedidos/OrderView'))
+const TicketBuyer       =   lazy(() => import('../pages/Admin/EventsAdmin/EditEvents/TicketBuyer'))
 
 function App () {
     return(
@@ -49,7 +51,7 @@ function App () {
                         element={ <Register /> }
                     />
                     <Route 
-                        path="/view_event" 
+                        path="/view_event/:id" 
                         element={ <ViewEvent /> }
                     />
                     <Route 
@@ -77,6 +79,10 @@ function App () {
                         element={ <Dashboard /> }
                     />
                     <Route 
+                        path="/edit_event/ticketBuyer" 
+                        element={ <TicketBuyer /> }
+                    />
+                    <Route 
                         path="/editar_evento/detalles" 
                         element={ <Details /> }
                     />
@@ -97,8 +103,12 @@ function App () {
                         element={ <WaitList /> }
                     />
                     <Route 
-                        path="/pedidos" 
-                        element={  <Pedidos /> } 
+                        path="/order" 
+                        element={  <OrderAdmin /> } 
+                    />
+                    <Route
+                        path="/order_view"
+                        element={ <OrderView />}
                     />
                     <Route 
                         path="/reportes" 

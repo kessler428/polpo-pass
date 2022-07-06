@@ -17,7 +17,7 @@ const SideBar = () => {
           <SideBarIcon icon={<BsCalendarDate size="20" />} text="Eventos"/>
         </NavLink>
         <NavLink 
-          to="/pedidos"
+          to="/order"
           className={ ({isActive}) => isActive ? 'bg-bgViolet mt-6 mb-4 p-4 text-white rounded mx-1' : 'mt-4 mb-4 p-4 text-white hover:bg-bgVioletHover'} 
         >
           <SideBarIcon icon={<CgNotes size="20"/>} text="Pedidos" />

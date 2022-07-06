@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useParams } from 'react-router-dom'
 import { Header } from '../../components/Header/Header'
 import { Cards } from '../../components/HomePage/Cards'
 import { ModalBill } from '../../components/ModalBuyEvent/ModalBill'
@@ -10,6 +11,7 @@ import innovation from '../../images/Innovation.png'
 export const ViewEvent = () => {
     
     const [openModal, setOpenModal] = useState(false)
+    const { id } = useParams();
 
     return (
         <>

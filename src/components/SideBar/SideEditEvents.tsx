@@ -9,7 +9,7 @@ export const SideEditEvents = () => {
     const [optGestionDeAsistentes, setOptGestionDeAsistentes] = useState(false);
 
     return (
-        <div className='h-screen ml-16 w-72 bg-gray-100 top-[76px] fixed overflow-auto'>
+        <div className='h-screen ml-16 w-72 bg-gray-100 top-[68px] fixed overflow-auto'>
             <div className='flex flex-row p-6 text-blue-600 font-bold border-b-2'>
                 <MdKeyboardArrowLeft className='h-6 w-6' />
                 <span className='ml-2'>Eventos</span>

@@ -45,9 +45,9 @@ const EventCard = () => {
                             <p className="">0,00$</p>
                             <div className=' flex flex-row'>
                                 <p className="">Evento <br /> Finalizado</p>
-                                <div className=''>
+                                <div className="ml-2 items-center flex cursor-pointer hover:rounded-full hover:bg-gray-100 px-6 h-14">
                                     <img
-                                        className="ml-2 -mt-2 cursor-pointer hover:rounded-full hover:bg-gray-100 px-6 py-4"
+                                        
                                         src={More}
                                         alt="More"
                                         onClick={() => {

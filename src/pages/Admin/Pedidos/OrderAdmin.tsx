@@ -8,9 +8,9 @@ import pedidos from '../../../images/pedidos.png'
 // Components
 import SideBar from '../../../components/SideBar';
 import HeaderManager from '../../../components/Header/HeaderManager';
-import { TableData } from "../../../components/Admin/Pedidos/TableData";
+import { TableData } from "../../../components/Admin/Pedidos/OrderAdmin/TableData";
 
-const Pedidos = () => {
+const OrderAdmin = () => {
 
     let pedido = 2;
 
@@ -20,7 +20,7 @@ const Pedidos = () => {
             <SideBar />
             <hr />
             <div className='bg-bgWhite'>
-                <div className='mx-auto w-9/12 pt-28  pb-24'>
+                <div className='mx-auto w-9/12 pt-28 pb-24'>
                     <h1 className=' text-6xl text-titleTextColor font-bold'>Pedidos</h1>
                     <hr />
                     <div className="flex flex-row mt-10 justify-center">
@@ -82,4 +82,4 @@ const Pedidos = () => {
     )
 }
 
-export default Pedidos;
+export default OrderAdmin;

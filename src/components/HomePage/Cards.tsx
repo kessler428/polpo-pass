@@ -33,7 +33,7 @@ export const Cards = () => {
                                 {item.direction}
                             </p>
                             <div className="flex flex-row justify-between mt-14">
-                                <NavLink to='/view_event' className="border border-bgViolet rounded-full px-4 py-2 hover:bg-bgViolet">
+                                <NavLink to={`/view_event/${item.id}`} className="border border-bgViolet rounded-full px-4 py-2 hover:bg-bgViolet">
                                     Inscribirse ahora
                                 </NavLink>
                                 <img src={save} alt="" />
