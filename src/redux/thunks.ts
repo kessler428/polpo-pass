@@ -36,7 +36,7 @@ export const eventsCards: EventDataProps[] = [
     },
 ]
 
-export const getEventsInfo = ( ) =>{
+export const getEventsInfo = () =>{
     return (dispatch: any ) => {
         const data = eventsCards
         dispatch( setEventInfo( data ) );
